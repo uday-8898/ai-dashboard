@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-black: #1b1b1b;
+  --color-dark-light: #2f2f2f;
+  --color-white: #fefefa;
+  --color-grayLight: #b4b4b4;
+  --color-grayLight-opec: #dddddd3c;
+  --color-grayDark: #545454;
+  --color-grayDark-opec: #54545430;
+  --color-accent: #5155d1;
+  --color-accent-opec: #878adf65;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-white);
+}
+.ant-upload.ant-upload-drag {
+  width: 100%;
+  max-height: 350px;
+}
+.ant-upload-list.ant-upload-list-picture {
+  width: 100%;
+}
+.input_box > .ant-upload-list.ant-upload-list-text {
+  width: 0%;
+  overflow-x: hidden;
+}
+
+.ant-upload-list.ant-upload-list-text {
+  max-height: 250px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s;
+}
+.active_folder_tab {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  transition: all 0.3s;
+}
+.new_database_tab {
+  background-color: var(--color-grayDark-opec);
+  color: var(--color-white);
+  border-radius: 0.5em;
+}
+.folder_tab {
+  padding: 0.5em;
+  transition: all 0.3s;
+}
+.folder_tab:hover {
+  background-color: var(--color-grayDark-opec);
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent-opec) var(--color-grayDark-opec);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-grayDark-opec);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent-opec);
+  border-radius: 10px;
+  border: 3px solid var(--color-grayDark-opec);
+}
+.query_card {
+  background-color: var(--color-grayLight-opec);
+  padding: 1em 1.3em;
+  border-radius: 10px;
+  border: 3px solid var(--color-accent-opec);
+}
+.req_card {
+  background-color: var(--color-accent-opec);
+  padding: 1em 1.3em;
+  border-radius: 10px;
+  border: 2px solid var(--color-accent-opec);
+}
+/* .ant-upload-list-item-name{
+  color: #4dc5ff !important;
+} */
+
+.react-pdf__Page__textContent.textLayer {
+  background-color: aqua;
+  display: none;
+}
+
+.ant-popover-inner {
+  padding: 0 !important;
+  /* padding: 12px; */
+}
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+}
+
+.pdf-iframe {
+  flex-grow: 1;
+  border: none;
+}
+
+.dark-btn {
+  background-color: var(--color-black);
+  color: var(--color-grayLight);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+}
+.dark-btn:hover {
+  background-color: var(--color-dark-light);
+  color: var(--color-grayLight);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+}
+@media only screen and (min-width: 765px) {
+  .hideclass {
+    display: none;
+  }
+}
+@media only screen and (max-width: 765px) {
+  .showclass {
+    display: none;
+  }
+}
